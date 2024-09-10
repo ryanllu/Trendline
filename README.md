@@ -1,6 +1,6 @@
 # Trendline
 
-`trendline` is a Python library for calculating trendlines for financial data. It provides functions to analyze trends in multiple assets or a single asset.
+`trendline` is a Python library designed to automatically calculate support and resistance trendlines for financial market data
 
 ## Installation
 
@@ -22,21 +22,21 @@ from trendline import calculate_trendlines_multiple, calculate_trendline_single
 
 
 ### Calculating Trendlines for a Single Asset
-For analyzing a single asset, use the calculate_trendline_single function. This function calculates trendlines for the provided DataFrame.
+For a single asset, use the `calculate_trendline_single function`. This function calculates support and resistance trendlines based on the provided DataFrame.
 
 Parameters:
-- dataframe (DataFrame): A DataFrame containing financial data for a single asset.
-- num_chunks (int, optional): Number of chunks to divide residuals into (default is 5).
-- residual_percentile (int, optional): Percentile for calculating residual cutoffs (default is 10).
+- `dataframe (DataFrame)` : A DataFrame containing financial data for a single asset.
+- `num_chunks (int, optional)` : Number of chunks to divide residuals into (default is 5).
+- `residual_percentile (int, optional)` : Percentile for calculating residual cutoffs (default is 10).
 
 Returns:
 A dictionary containing trendline data for the single asset, including:
-- 'support_line_gradient': Gradient of the support (low) trendline.
-- 'resistance_line_gradient': Gradient of the resistance (high) trendline.
-- 'support_line_start': First value of the support (low) trendline.
-- 'support_line_end': Last value of the support (low) trendline.
-- 'resistance_line_start': First value of the resistance (high) trendline.
-- 'resistance_line_end': Last value of the resistance (high) trendline.
+- `support_line_gradient` : Gradient of the support (low) trendline.
+- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
+- `support_line_start` : First value of the support (low) trendline.
+- `support_line_end` : Last value of the support (low) trendline.
+- `resistance_line_start` : First value of the resistance (high) trendline.
+- `resistance_line_end` : Last value of the resistance (high) trendline.
 
 Example
 ```python
@@ -57,21 +57,21 @@ print(result)
 
 
 ### Calculating Trendlines for Multiple Assets
-If you have data for multiple assets, use the calculate_trendlines_multiple function. This function calculates trendlines for each asset in a dictionary of DataFrames.
+If you have data for multiple assets, use the `calculate_trendlines_multiple` function. This function calculates support and resistance trendlines for each asset in a dictionary of DataFrames.
 
 Parameters:
-- dataframes (dict): Dictionary where keys are asset identifiers and values are DataFrames containing financial data for each asset.
-- num_chunks (int, optional): Number of chunks to divide residuals into (default is 5).
-- residual_percentile (int, optional): Percentile for calculating residual cutoffs (default is 10).
+- `dataframes (dict)`: Dictionary where keys are asset identifiers and values are DataFrames containing financial data for each asset.
+- `num_chunks (int, optional)` : Number of chunks to divide residuals into (default is 5).
+- `residual_percentile (int, optional)` : Percentile for calculating residual cutoffs (default is 10).
 
 Returns:
 A dictionary where keys are asset identifiers and values are dictionaries containing trendline data for each asset, including:
-- 'support_line_gradient': Gradient of the support (low) trendline.
-- 'resistance_line_gradient': Gradient of the resistance (high) trendline.
-- 'support_line_start': First value of the support (low) trendline.
-- 'support_line_end': Last value of the support (low) trendline.
-- 'resistance_line_start': First value of the resistance (high) trendline.
-- 'resistance_line_end': Last value of the resistance (high) trendline.
+- `support_line_gradient` : Gradient of the support (low) trendline.
+- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
+- `support_line_start` : First value of the support (low) trendline.
+- `support_line_end` : Last value of the support (low) trendline.
+- `resistance_line_start` : First value of the resistance (high) trendline.
+- `resistance_line_end` : Last value of the resistance (high) trendline.
 
 Example
 ```python
