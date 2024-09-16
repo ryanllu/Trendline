@@ -84,12 +84,12 @@ def calculate_trendlines_multiple(dataframes, num_chunks=3, residual_percentile=
 
         # Store the results
         trendlines_data[asset_id] = {
-            'resistance_line_gradient': resistance_line_gradient,
+            'support_line_start': support_line_start,
+            'support_line_end': support_line_end,
             'support_line_gradient': support_line_gradient,
             'resistance_line_start': resistance_line_start,
             'resistance_line_end': resistance_line_end,
-            'support_line_start': support_line_start,
-            'support_line_end': support_line_end,
+            'resistance_line_gradient': resistance_line_gradient
         }
     
     return trendlines_data
@@ -176,10 +176,10 @@ def calculate_trendline_single(dataframe, num_chunks=3, residual_percentile=5):
 
     # Return the trendline data
     return {
-        'resistance_line_gradient': resistance_line_gradient,
         'support_line_gradient': support_line_gradient,
-        'resistance_line_start': resistance_line_start,
-        'resistance_line_end': resistance_line_end,
         'support_line_start': support_line_start,
         'support_line_end': support_line_end,
+        'resistance_line_gradient': resistance_line_gradient,
+        'resistance_line_start': resistance_line_start,
+        'resistance_line_end': resistance_line_end
     }
