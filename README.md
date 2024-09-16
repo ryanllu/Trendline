@@ -31,12 +31,13 @@ Parameters:
 
 Returns:
 A dictionary containing trendline data for the single asset, including:
-- `support_line_gradient` : Gradient of the support (low) trendline.
-- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
 - `support_line_start` : First value of the support (low) trendline.
 - `support_line_end` : Last value of the support (low) trendline.
+- `support_line_gradient` : Gradient of the support (low) trendline.
 - `resistance_line_start` : First value of the resistance (high) trendline.
 - `resistance_line_end` : Last value of the resistance (high) trendline.
+- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
+
 
 Example
 ```python
@@ -81,11 +82,12 @@ Parameters:
 Returns:
 A dictionary where keys are asset identifiers and values are dictionaries containing trendline data for each asset, including:
 - `support_line_gradient` : Gradient of the support (low) trendline.
-- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
 - `support_line_start` : First value of the support (low) trendline.
 - `support_line_end` : Last value of the support (low) trendline.
 - `resistance_line_start` : First value of the resistance (high) trendline.
 - `resistance_line_end` : Last value of the resistance (high) trendline.
+- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
+
 
 Example
 ```python
