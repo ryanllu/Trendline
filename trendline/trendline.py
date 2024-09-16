@@ -13,12 +13,12 @@ def calculate_trendlines_multiple(dataframes, num_chunks=3, residual_percentile=
 
     Returns:
     - dict: Dictionary where keys are asset identifiers and values are dictionaries containing trendline data:
-      - 'resistance_line_gradient': Gradient of the resistance (high) trendline.
       - 'support_line_gradient': Gradient of the support (low) trendline.
-      - 'resistance_line_start': First value of the resistance (high) trendline.
-      - 'resistance_line_end': Last value of the resistance (high) trendline.
       - 'support_line_start': First value of the support (low) trendline.
       - 'support_line_end': Last value of the support (low) trendline.
+      - 'resistance_line_gradient': Gradient of the resistance (high) trendline.
+      - 'resistance_line_start': First value of the resistance (high) trendline.
+      - 'resistance_line_end': Last value of the resistance (high) trendline.
     """
     trendlines_data = {}
     
@@ -106,12 +106,12 @@ def calculate_trendline_single(dataframe, num_chunks=3, residual_percentile=5):
 
     Returns:
     - dict: Dictionary containing trendline data:
-      - 'resistance_line_gradient': Gradient of the resistance (high) trendline.
       - 'support_line_gradient': Gradient of the support (low) trendline.
-      - 'resistance_line_start': First value of the resistance (high) trendline.
-      - 'resistance_line_end': Last value of the resistance (high) trendline.
       - 'support_line_start': First value of the support (low) trendline.
       - 'support_line_end': Last value of the support (low) trendline.
+      - 'resistance_line_gradient': Gradient of the resistance (high) trendline.
+      - 'resistance_line_start': First value of the resistance (high) trendline.
+      - 'resistance_line_end': Last value of the resistance (high) trendline.
     """
     # Select the data for the asset
     asset_data = dataframe
