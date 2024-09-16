@@ -1,6 +1,6 @@
 # Trendline
 
-`trendline` is a Python library designed to automatically calculate support and resistance trendlines for financial market data.
+Trendline is a Python library designed for automatic estimation of financial asset price trendlines.
 
 ## Installation
 
