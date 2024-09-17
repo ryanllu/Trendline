@@ -39,7 +39,7 @@ bitcoin = bitcoin.resample('3D').agg({
 
 Initial price chart:
 
-![Line Plot](images/line.svg)
+![Candlestick Plot](images/candlestick.svg)
 
 
 ### Calculating Trendlines for a Single Asset
@@ -111,8 +111,7 @@ You can then visualize the trendline using data visualization library like `tren
     file.write(svg)
 ```
 
-Output:
-
+Output
 ![Candlestick Plot with Trendline](images/candlestick_trendline.svg)
 
 
@@ -158,6 +157,7 @@ data={
 }
 
 multiple_trendlines = calculate_multiple_trendlines(data)
+print(multiple_trendlines)
 
 ```
 
