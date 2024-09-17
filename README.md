@@ -2,7 +2,6 @@
 
 Trendline is a Python library designed for automatic estimation of financial asset price trendlines.
 
-<br>
 
 ## Installation
 
@@ -11,7 +10,6 @@ You can install the `trendline` library using pip:
 ```bash
 pip install trendline
 ```
-<br>
 
 ## Example Use
 
@@ -44,7 +42,6 @@ Initial price chart:
 
 ![Candlestick Plot](images/candlestick.svg)
 
-<br>
 
 ### Calculating Trendlines for a Single Asset
 For a single asset, use the `calculate_trendline` function. This function calculates support and resistance trendlines based on the provided DataFrame.
@@ -82,7 +79,6 @@ Output
   'resistance_last_value': 68705.86307565791, 
   'resistance_gradient': -54.054481907894726}
 ```
-<br>
 
 ### Visualize Trendline
 You can then visualize the trendline using data visualization library like `trendline`.
@@ -118,7 +114,6 @@ Output
 
 ![Candlestick Plot with Trendline](images/candlestick_trendline.svg)
 
-<br>
 
 ### Calculating Trendlines for Multiple Assets
 If you have data for multiple assets, use the `calculate_multiple_trendlines` function. This function calculates support and resistance trendlines for each asset in a dictionary of DataFrames.
