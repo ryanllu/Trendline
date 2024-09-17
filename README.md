@@ -37,7 +37,7 @@ bitcoin = bitcoin.resample('3D').agg({
 })[-60:]
 ```
 
-Initial price chart:
+Initial price chart
 
 ![Candlestick Plot](images/candlestick.svg)
 
@@ -59,8 +59,6 @@ A dictionary containing trendline data for the single asset, including:
 - `resistance_last_value`: Last value of the resistance trendline.
 - `resistance_gradient`: Gradient of the resistance trendline.
 
-
-Example
 ```python
 from trendline import calculate_trendline
 
@@ -80,6 +78,9 @@ Output
   'resistance_last_value': 68705.86307565791, 
   'resistance_gradient': -54.054481907894726}
 ```
+
+
+
 
 ### Visualize Trendline
 You can then visualize the trendline using data visualization library like `trendline`.
@@ -112,7 +113,9 @@ You can then visualize the trendline using data visualization library like `tren
 ```
 
 Output
+
 ![Candlestick Plot with Trendline](images/candlestick_trendline.svg)
+
 
 
 
