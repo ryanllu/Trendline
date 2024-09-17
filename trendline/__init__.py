@@ -1,8 +1,8 @@
 # trendline/__init__.py
 
-from .trendline import calculate_trendlines_multiple, calculate_trendline_single
+from .trendline import calculate_trendline, calculate_multiple_trendlines
 
 __all__ = [
-    'calculate_trendlines_multiple',
-    'calculate_trendline_single',
+    'calculate_trendline',
+    'calculate_multiple_trendlines',
 ]

@@ -11,10 +11,10 @@ setup(
         'numpy',
         'scikit-learn',
     ],
-    description='A library for calculating trendlines for financial data.',
-    author='Your Name',
-    author_email='your.email@example.com',
-    url='https://github.com/yourusername/trendline',  # Update with your repository URL if available
+    description='Trendline is a Python library designed for automatic estimation of financial asset price trendlines.',
+    author='Ryan L',
+    author_email='rylu.lubis@gmail.com',
+    url='https://github.com/ryanllu/trendline',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Financial and Insurance Industry',
