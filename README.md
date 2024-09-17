@@ -22,7 +22,7 @@ from trendline import calculate_trendlines_multiple, calculate_trendline_single
 
 
 ### Calculating Trendlines for a Single Asset
-For a single asset, use the `calculate_trendline_single function`. This function calculates support and resistance trendlines based on the provided DataFrame.
+For a single asset, use the `calculate_trendline` function. This function calculates support and resistance trendlines based on the provided DataFrame.
 
 Parameters:
 - `dataframe (DataFrame)` : A DataFrame containing financial data for a single asset.
@@ -31,18 +31,18 @@ Parameters:
 
 Returns:
 A dictionary containing trendline data for the single asset, including:
-- `support_line_start` : First value of the support (low) trendline.
-- `support_line_end` : Last value of the support (low) trendline.
-- `support_line_gradient` : Gradient of the support (low) trendline.
-- `resistance_line_start` : First value of the resistance (high) trendline.
-- `resistance_line_end` : Last value of the resistance (high) trendline.
-- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
+- `support_first_value`: First value of the support trendline.
+- `support_last_value`: Last value of the support trendline.
+- `support_gradient`: Gradient of the support trendline.
+- `resistance_first_value`: First value of the resistance trendline.
+- `resistance_last_value`: Last value of the resistance trendline.
+- `resistance_gradient`: Gradient of the resistance trendline.
 
 
 Example
 ```python
 import pandas as pd
-from trendline import calculate_trendline_single
+from trendline import calculate_trendline
 import yfinance as yf
 from datetime import datetime
 
@@ -55,7 +55,7 @@ sp500 = yf.download('^GSPC', start=start_date, end=end_date)
 sp500 = sp500.resample('3D').ffill() 
 
 # Calculate support and resistance line
-sr = calculate_trendline_single(sp500)
+sr = calculate_trendline(sp500)
 
 print(sr)
 ```
@@ -72,7 +72,7 @@ Output
 
 
 ### Calculating Trendlines for Multiple Assets
-If you have data for multiple assets, use the `calculate_trendlines_multiple` function. This function calculates support and resistance trendlines for each asset in a dictionary of DataFrames.
+If you have data for multiple assets, use the `calculate_multiple_trendlines` function. This function calculates support and resistance trendlines for each asset in a dictionary of DataFrames.
 
 Parameters:
 - `dataframes (dict)`: Dictionary where keys are asset identifiers and values are DataFrames containing financial data for each asset.
@@ -81,18 +81,19 @@ Parameters:
 
 Returns:
 A dictionary where keys are asset identifiers and values are dictionaries containing trendline data for each asset, including:
-- `support_line_start` : First value of the support (low) trendline.
-- `support_line_end` : Last value of the support (low) trendline.
-- `support_line_gradient` : Gradient of the support (low) trendline.
-- `resistance_line_start` : First value of the resistance (high) trendline.
-- `resistance_line_end` : Last value of the resistance (high) trendline.
-- `resistance_line_gradient` : Gradient of the resistance (high) trendline.
+- `support_first_value`: First value of the support trendline.
+- `support_last_value`: Last value of the support trendline.
+- `support_gradient`: Gradient of the support trendline.
+- `resistance_first_value`: First value of the resistance trendline.
+- `resistance_last_value`: Last value of the resistance trendline.
+- `resistance_gradient`: Gradient of the resistance trendline.
+
 
 
 Example
 ```python
 import pandas as pd
-from trendline import calculate_trendlines_multiple
+from trendline import calculate_multiple_trendlines
 import yfinance as yf
 from datetime import datetime
 
@@ -112,7 +113,7 @@ data={"nikkei225":n225,
       "s&p500":sp500}
 
 # Calculate multiple support and resistance lines
-srs = calculate_trendlines_multiple(data)
+srs = calculate_multiple_trendlines(data)
 
 print(srs)
 ```

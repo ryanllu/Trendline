@@ -13,12 +13,12 @@ def calculate_trendline(dataframe, num_chunks=3, residual_percentile=5):
 
     Returns:
     - dict: Dictionary containing trendline data:
-      - 'support_first_value': First value of the support (low) trendline.
-      - 'support_last_value': Last value of the support (low) trendline.
-      - 'support_gradient': Gradient of the support (low) trendline.
-      - 'resistance_first_value': First value of the resistance (high) trendline.
-      - 'resistance_last_value': Last value of the resistance (high) trendline.
-      - 'resistance_gradient': Gradient of the resistance (high) trendline.
+      - 'support_first_value': First value of the support trendline.
+      - 'support_last_value': Last value of the support trendline.
+      - 'support_gradient': Gradient of the support trendline.
+      - 'resistance_first_value': First value of the resistance trendline.
+      - 'resistance_last_value': Last value of the resistance trendline.
+      - 'resistance_gradient': Gradient of the resistance trendline.
     """
     # Select the data for the asset
     asset_data = dataframe
@@ -103,12 +103,12 @@ def calculate_multiple_trendlines(dataframes, num_chunks=3, residual_percentile=
 
     Returns:
     - dict: Dictionary where keys are asset identifiers and values are dictionaries containing trendline data:
-      - 'support_gradient': Gradient of the support (low) trendline.
-      - 'support_first_value': First value of the support (low) trendline.
-      - 'support_last_value': Last value of the support (low) trendline.
-      - 'resistance_gradient': Gradient of the resistance (high) trendline.
-      - 'resistance_first_value': First value of the resistance (high) trendline.
-      - 'resistance_last_value': Last value of the resistance (high) trendline.
+      - 'support_gradient': Gradient of the support trendline.
+      - 'support_first_value': First value of the support trendline.
+      - 'support_last_value': Last value of the support trendline.
+      - 'resistance_gradient': Gradient of the resistance trendline.
+      - 'resistance_first_value': First value of the resistance trendline.
+      - 'resistance_last_value': Last value of the resistance trendline.
     """
     trendlines_data = {}
     
