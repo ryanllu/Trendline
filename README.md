@@ -77,30 +77,31 @@ Output
   'support_gradient': -200.1508413461538, 
   'resistance_first_value': 71895.0775082237, 
   'resistance_last_value': 68705.86307565791, 
-  'resistance_gradient': -54.054481907894726}
+  'resistance_gradient': -54.054481907894726
+}
 ```
 
 ### Visualize Trendline
 You can then visualize the trendline using data visualization library like `trendline`.
 
 ```python
-  from trendline import calculate_trendline
-  from fsplot import plot_candlestick_trendline
+from trendline import calculate_trendline
+from fsplot import plot_candlestick_trendline
 
-  # Calculate trendline
-  trend_line = calculate_trendline(bitcoin)
+# Calculate trendline
+trend_line = calculate_trendline(bitcoin)
 
 
-  # Prepare data for plotting
-  data = {
-      "Open": bitcoin["Open"],
-      "High": bitcoin["High"],
-      "Low": bitcoin["Low"],
-      "Close": bitcoin["Close"],
-      "support_first_value": trend_line["support_first_value"],
-      "support_gradient": trend_line["support_gradient"],
-      "resistance_first_value": trend_line["resistance_first_value"],
-      "resistance_gradient": trend_line["resistance_gradient"]
+# Prepare data for plotting
+data = {
+    "Open": bitcoin["Open"],
+    "High": bitcoin["High"],
+    "Low": bitcoin["Low"],
+    "Close": bitcoin["Close"],
+    "support_first_value": trend_line["support_first_value"],
+    "support_gradient": trend_line["support_gradient"],
+    "resistance_first_value": trend_line["resistance_first_value"],
+    "resistance_gradient": trend_line["resistance_gradient"]
   }
 
   # Generate and display the candlestick plot
