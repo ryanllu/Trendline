@@ -69,7 +69,7 @@ trend_line = calculate_trendline(bitcoin)
 print(trend_line)
 ```
 
-Output
+Output:
 ```python
 {
   'support_first_value': 61290.158653846156, 
@@ -111,7 +111,7 @@ data = {
     file.write(svg)
 ```
 
-Output
+Output:
 
 ![Candlestick Plot with Trendline](images/candlestick_trendline.svg)
 
@@ -161,7 +161,7 @@ print(multiple_trendlines)
 
 ```
 
-Output
+Output:
 ```python
 {
   'bitcoin': 
