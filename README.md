@@ -1,11 +1,11 @@
 # Trendline
 
-Trendline is a Python library designed for automatic estimation of financial asset price trendlines.
+Trendline is a library for automated generation of trendlines in financial OHLC data (crypto, stocks, etc.).
 
 
 ## Installation
 
-You can install the `trendline` library using pip:
+You can install using pip:
 
 ```bash
 pip install trendline
